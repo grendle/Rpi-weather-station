@@ -36,9 +36,9 @@ MEASURE_TIMES = {
 if reset_flag == 0:
 	reset()
 	
-
-bus.write_byte_data(addr, CMD_READ_TEMP_NOHOLD) 
-(msb, lsb, checksum) = bus.read_i2c_block_data(addr, CMD_READ_TEMP_HOLD, 3) 
+def get_h():
+	bus.write_byte_data(addr, CMD_READ_TEMP_NOHOLD) 
+	(msb, lsb, checksum) = bus.read_i2c_block_data(addr, CMD_READ_TEMP_HOLD, 3) 
 
 def reset():
 	bus.write_byte_data(addr, CMD_SOFT_RESET) 
