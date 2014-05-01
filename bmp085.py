@@ -91,7 +91,7 @@ p = p / 3386.389
 t = "%.2f" % t
 p = "%.2f" % p
 
-db = MySQLdb.connect("localhost", "<dbname>", "<dbpass>", "bmp085") 
+db = MySQLdb.connect("localhost", "<dbname>", "<dbpass>", "dbtable") 
 cursor=db.cursor()
 
 with db:
